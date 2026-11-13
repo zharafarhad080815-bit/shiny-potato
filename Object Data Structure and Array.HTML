@@ -1,0 +1,35 @@
+<!--Store facts about a student in an object and a list of colours in an array. You will print values by key and by index number, join the array into one line, and remove the last colour with pop().-->
+<!DOCTYPE html>
+<html lang="en"> 
+    <body>
+        <h2>Object Data Structure and Array</h2>
+        <p>This activity demonstrates the use of JavaScript objects and arrays, and how to access their properties and elements.</p>
+        <p id="object-details"></p>
+        <p id="array-details"></p>
+        <script>
+            // Create a student object with details
+            let student = {
+                name: "John Doe",
+                age: 20,
+                major: "Computer Science"
+            };
+
+            // Create an array of colours
+            let colours = ["Red", "Green", "Blue", "Yellow", "Purple"];
+
+            // Display student details using key access
+            document.getElementById("object-details").innerHTML = `
+                <strong>Name:</strong> ${student.name}<br>
+                <strong>Age:</strong> ${student.age}<br>
+                <strong>Major:</strong> ${student.major}
+            `;
+
+            // Display colours using index access
+            document.getElementById("array-details").innerHTML = `
+                <strong>Colours:</strong> ${colours.join(", ")}<br>
+                <strong>Last Colour Removed:</strong> ${colours.pop()}<br>
+                <strong>Colours After Pop:</strong> ${colours.join(", ")}
+            `;
+        </script>
+    </body>
+</html>
